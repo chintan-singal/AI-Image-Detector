@@ -1,0 +1,66 @@
+Using Device: cuda
+GPU: NVIDIA GeForce GTX 1650
+Classes: ['ai', 'real']
+Train: 242342
+Val: 51929
+Test: 51933
+
+Epoch 1/10
+----------------------------------------
+C:\Users\chint\OneDrive\Documents\cs project\CS_project\Lib\site-packages\PIL\Image.py:1137: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+TRAIN Loss: 0.5897 | Acc: 0.6820
+VAL Loss: 0.5806 | Acc: 0.6848
+
+Epoch 2/10
+----------------------------------------
+TRAIN Loss: 0.5751 | Acc: 0.6934
+VAL Loss: 0.5714 | Acc: 0.6934
+
+Epoch 3/10
+----------------------------------------
+TRAIN Loss: 0.5727 | Acc: 0.6973
+VAL Loss: 0.5707 | Acc: 0.6963
+
+Epoch 4/10
+----------------------------------------
+TRAIN Loss: 0.5743 | Acc: 0.6955
+VAL Loss: 0.5781 | Acc: 0.6876
+
+Epoch 5/10
+----------------------------------------
+TRAIN Loss: 0.5720 | Acc: 0.6969
+VAL Loss: 0.5894 | Acc: 0.6749
+
+Epoch 6/10
+----------------------------------------
+TRAIN Loss: 0.5723 | Acc: 0.6976
+VAL Loss: 0.5565 | Acc: 0.7106
+
+Epoch 7/10
+----------------------------------------
+TRAIN Loss: 0.5720 | Acc: 0.6977
+VAL Loss: 0.5659 | Acc: 0.6999
+
+Epoch 8/10
+----------------------------------------
+TRAIN Loss: 0.5736 | Acc: 0.6947
+VAL Loss: 0.5576 | Acc: 0.7089
+
+Epoch 9/10
+----------------------------------------
+TRAIN Loss: 0.5740 | Acc: 0.6950
+VAL Loss: 0.5764 | Acc: 0.6891
+
+Epoch 10/10
+----------------------------------------
+TRAIN Loss: 0.5702 | Acc: 0.6997
+VAL Loss: 0.5688 | Acc: 0.6970
+
+Best Validation Accuracy: 0.7106241213965221
+
+Model Saved: baseline_ai_detector.pth
+
+TEST ACCURACY: 0.7100
+
+Total Time: 405.71 minutes

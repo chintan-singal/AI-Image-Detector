@@ -1,0 +1,10 @@
+flask
+werkzeug
+torch
+torchvision
+timm
+xgboost
+joblib
+shap
+pillow
+numpy

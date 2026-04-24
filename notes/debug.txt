@@ -1,0 +1,109 @@
+TRAIN Accuracy: 0.7132
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          ai     0.6780    0.7976    0.7329    119563
+        real     0.7620    0.6310    0.6904    122779
+
+    accuracy                         0.7132    242342
+   macro avg     0.7200    0.7143    0.7117    242342
+weighted avg     0.7206    0.7132    0.7114    242342
+
+Confusion Matrix:
+[[95369 24194]
+ [45303 77476]]
+
+Per-Class Accuracy:
+ai: 0.7976
+real: 0.6310
+
+VAL Accuracy: 0.7106
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          ai     0.6758    0.7946    0.7304     25620
+        real     0.7587    0.6288    0.6877     26309
+
+    accuracy                         0.7106     51929
+   macro avg     0.7173    0.7117    0.7091     51929
+weighted avg     0.7178    0.7106    0.7088     51929
+
+Confusion Matrix:
+[[20358  5262]
+ [ 9765 16544]]
+
+Per-Class Accuracy:
+ai: 0.7946
+real: 0.6288
+
+Total Wrong Predictions: 15027
+
+Top 20 Wrong Samples:
+File: ./dataset\val\ai\ai_art_03185230bed5483aab3f529920a2c7fb.jpg | True: ai | Pred: real | Conf: 0.6213
+File: ./dataset\val\ai\ai_art_1b34393fcc2b4961aac7c49988f8a907.png | True: ai | Pred: real | Conf: 0.7193
+File: ./dataset\val\ai\ai_art_231fec3de5d9401887cc6897299d969f.jpg | True: ai | Pred: real | Conf: 0.6469
+File: ./dataset\val\ai\ai_art_2bf9992d164e48ffb50ab484b60c0243.jpg | True: ai | Pred: real | Conf: 0.6754
+File: ./dataset\val\ai\ai_art_2eba28d06ef9457186f27c030f79a431.jpg | True: ai | Pred: real | Conf: 0.5473
+File: ./dataset\val\ai\ai_art_341a54a0bde148498b6f4be7aa1c98bf.jpg | True: ai | Pred: real | Conf: 0.6846
+File: ./dataset\val\ai\ai_art_354119c87e1c4d4ebccf577d1e52d540.jpg | True: ai | Pred: real | Conf: 0.7142
+File: ./dataset\val\ai\ai_art_35b0475edc664de6833f871b291ce529.jpg | True: ai | Pred: real | Conf: 0.9247
+File: ./dataset\val\ai\ai_art_375fe5fb237344b0b9394e587984d224.jpg | True: ai | Pred: real | Conf: 0.7528
+File: ./dataset\val\ai\ai_art_389772bdbc23466aa82ce116beb63f03.jpg | True: ai | Pred: real | Conf: 0.7711
+File: ./dataset\val\ai\ai_art_5d4ca96723d34dca8f45da4c81b40c64.jpg | True: ai | Pred: real | Conf: 0.6748
+File: ./dataset\val\ai\ai_art_61aed63b5c0c46a080bf826139cc9091.png | True: ai | Pred: real | Conf: 0.7784
+File: ./dataset\val\ai\ai_art_620aa9b2ee2f4b8781f273c7fd1cd114.jpg | True: ai | Pred: real | Conf: 0.8067
+File: ./dataset\val\ai\ai_art_6573be79271445fc90a4616872494e5b.jpeg | True: ai | Pred: real | Conf: 0.5485
+File: ./dataset\val\ai\ai_art_6750423407cd4096aab7e92ec2b217f9.jpg | True: ai | Pred: real | Conf: 0.6149
+File: ./dataset\val\ai\ai_art_6c48384c69224d2390719fe4d163b364.png | True: ai | Pred: real | Conf: 0.6619
+File: ./dataset\val\ai\ai_art_743229a8092449ef8797d37be41feb6c.jpg | True: ai | Pred: real | Conf: 0.7604
+File: ./dataset\val\ai\ai_art_79103768b5fa4b75aa973c242a988b6b.png | True: ai | Pred: real | Conf: 0.8287
+File: ./dataset\val\ai\ai_art_82c92520ba3c49f7abd92c643e3d7384.jpg | True: ai | Pred: real | Conf: 0.5129
+File: ./dataset\val\ai\ai_art_8320a8917eb44d0598e4d006cf1e24fb.jpg | True: ai | Pred: real | Conf: 0.6424
+
+TEST Accuracy: 0.7100
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          ai     0.6750    0.7949    0.7301     25622
+        real     0.7585    0.6273    0.6867     26311
+
+    accuracy                         0.7100     51933
+   macro avg     0.7167    0.7111    0.7084     51933
+weighted avg     0.7173    0.7100    0.7081     51933
+
+Confusion Matrix:
+[[20367  5255]
+ [ 9807 16504]]
+
+Per-Class Accuracy:
+ai: 0.7949
+real: 0.6273
+
+Total Wrong Predictions: 15062
+
+Top 20 Wrong Samples:
+File: ./dataset\test\ai\ai_art_090fc1c9ac6a430c9e6ce66d954def24.jpg | True: ai | Pred: real | Conf: 0.8695
+File: ./dataset\test\ai\ai_art_0972feb89e6e402c938e7a3c4075b570.jpg | True: ai | Pred: real | Conf: 0.6688
+File: ./dataset\test\ai\ai_art_0d69fb6427924afc8b58c6b7aedba4a9.jpeg | True: ai | Pred: real | Conf: 0.5246
+File: ./dataset\test\ai\ai_art_104cda0fc19a4d92afe761d9b789c6e9.jpg | True: ai | Pred: real | Conf: 0.7904
+File: ./dataset\test\ai\ai_art_14a899c1da244a3bbbfa96fc36fd5550.png | True: ai | Pred: real | Conf: 0.9272
+File: ./dataset\test\ai\ai_art_178af8ae6f974e019dc2fc07fdcdf00e.jpg | True: ai | Pred: real | Conf: 0.6812
+File: ./dataset\test\ai\ai_art_1aa17c18c41c424c83923b7c4a499f5b.jpg | True: ai | Pred: real | Conf: 0.7717
+File: ./dataset\test\ai\ai_art_1be12013f9ba4a76b49cf44a34abffcd.png | True: ai | Pred: real | Conf: 0.8538
+File: ./dataset\test\ai\ai_art_205db944b46d4f5384b4d62c1fd54f69.jpg | True: ai | Pred: real | Conf: 0.8686
+File: ./dataset\test\ai\ai_art_269b26fe10874fe49c92cbcb66345c4a.jpg | True: ai | Pred: real | Conf: 0.7385
+File: ./dataset\test\ai\ai_art_289151d2d7884f9c9f3e5942740d72d1.jpg | True: ai | Pred: real | Conf: 0.5791
+File: ./dataset\test\ai\ai_art_2cb1f994130b4f0eaeb9a525d21638fe.jpg | True: ai | Pred: real | Conf: 0.7363
+File: ./dataset\test\ai\ai_art_2e7f4d2b85d949a5b4ba09c458a09222.jpg | True: ai | Pred: real | Conf: 0.5887
+File: ./dataset\test\ai\ai_art_36871ed9a5de4dfe8d2bac7e234e7939.jpg | True: ai | Pred: real | Conf: 0.7218
+File: ./dataset\test\ai\ai_art_3d5c026c391d487580d446466bf928ba.jpg | True: ai | Pred: real | Conf: 0.6852
+File: ./dataset\test\ai\ai_art_4017aaf69fcc4934b583685119a34860.jpg | True: ai | Pred: real | Conf: 0.8068
+File: ./dataset\test\ai\ai_art_418f6dc1a9624611bddbd2382682bc7b.png | True: ai | Pred: real | Conf: 0.6448
+File: ./dataset\test\ai\ai_art_42ac1b2cfb1f46be855171fa1a3caa8b.jpg | True: ai | Pred: real | Conf: 0.6553
+File: ./dataset\test\ai\ai_art_4a37455e6c1e49d29e2404ce9c3bad96.jpg | True: ai | Pred: real | Conf: 0.5692
+File: ./dataset\test\ai\ai_art_528c22a526ca41edb21a2eaea79cc3a3.jpg | True: ai | Pred: real | Conf: 0.
+
+

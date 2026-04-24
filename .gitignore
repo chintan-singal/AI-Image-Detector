@@ -1,0 +1,16 @@
+venv/
+env/
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+temp_uploads/
+dataset/
+MASTER_DATASET_FINAL/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+models/
+features/
