@@ -16,7 +16,7 @@ This project combines:
 # Project Structure
 
 ```text
-AI Image Detector/
+AI-Image-Detector/
 │── app.py
 │── model_api.py
 │── requirements.txt
@@ -32,8 +32,8 @@ AI Image Detector/
 │   └── swin_X_train.npy
 │
 ├── dev/
-│── research/
-│── notes/
+├── research/
+└── notes/
 ```
 
 ---
@@ -63,6 +63,67 @@ Feature Fusion
 Hard-Mined Weighted XGBoost
 ↓
 Prediction + Confidence + SHAP Explanation
+```
+
+---
+
+# Download Required Model Files
+
+Large trained model files and extracted feature matrices are hosted separately due to GitHub file size limits.
+
+## Download Link
+
+https://drive.google.com/file/d/17cYU4K6t6ibIcRTWef9WwSTAERCdorMc/view?usp=sharing
+
+---
+
+# How to Add the Files
+
+## Step 1: Download the ZIP file
+
+Download the archive from the Google Drive link above.
+
+## Step 2: Extract the ZIP
+
+After downloading, right-click the ZIP file and choose:
+
+```text
+Extract All...
+```
+
+## Step 3: Copy folders into project root
+
+Move the extracted folders:
+
+```text
+models/
+features/
+```
+
+into the main project folder where:
+
+```text
+app.py
+model_api.py
+README.md
+```
+
+already exist.
+
+## Final Structure Should Look Like:
+
+```text
+AI-Image-Detector/
+│── app.py
+│── model_api.py
+│── requirements.txt
+│── README.md
+│
+├── models/
+├── features/
+├── dev/
+├── research/
+└── notes/
 ```
 
 ---
