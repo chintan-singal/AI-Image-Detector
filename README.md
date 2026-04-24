@@ -66,6 +66,197 @@ Prediction + Confidence + SHAP Explanation
 ```
 
 ---
+# Model Evolution & Experimental Results
+
+This project was developed through multiple training stages, progressively improving performance from a baseline CNN model to a final hybrid flagship architecture. Results below are summarized from training logs and experiments. 
+
+---
+
+## Stage 1 — Baseline CNN (EfficientNet-B0 End-to-End)
+
+Initial model trained directly as a binary image classifier.
+
+### Architecture
+
+* EfficientNet-B0
+* Final classification head (2 classes)
+
+### Performance
+
+| Metric              |  Score |
+| ------------------- | -----: |
+| Validation Accuracy | 71.06% |
+| Test Accuracy       | 71.00% |
+
+### Key Observation
+
+Good starting point, but struggled on difficult and photorealistic AI images. 
+
+---
+
+## Stage 2 — CNN Features + Classical ML Models
+
+EfficientNet was converted into a feature extractor (1280-dim embeddings), then multiple ML models were tested.
+
+### Results
+
+| Model               | Validation |   Test |
+| ------------------- | ---------: | -----: |
+| Logistic Regression |     77.29% | 77.72% |
+| Linear SVM          |     77.40% | 77.80% |
+| Random Forest       |     79.28% | 79.22% |
+| Decision Tree       |     63.58% | 63.69% |
+| XGBoost             |     80.77% | 80.87% |
+
+### Key Observation
+
+XGBoost significantly outperformed the baseline neural classifier. 
+
+---
+
+## Stage 3 — Swin Transformer Features + XGBoost
+
+Added a transformer-based vision encoder for stronger global visual understanding.
+
+### Architecture
+
+* Swin Tiny Transformer
+* 768-dim feature embeddings
+* XGBoost classifier
+
+### Performance
+
+| Metric              |  Score |
+| ------------------- | -----: |
+| Validation Accuracy | 84.87% |
+| Test Accuracy       | 85.31% |
+
+### Key Observation
+
+Large jump in accuracy versus CNN-only pipeline. 
+
+---
+
+## Stage 4 — Feature Fusion (EfficientNet + Swin)
+
+Combined local texture features (CNN) with global semantic features (Transformer).
+
+### Architecture
+
+* EfficientNet features (1280)
+* Swin features (768)
+* Concatenated to 2048-dim vector
+* XGBoost classifier
+
+### Performance
+
+| Metric              |  Score |
+| ------------------- | -----: |
+| Validation Accuracy | 88.41% |
+| Test Accuracy       | 88.59% |
+
+### Key Observation
+
+Feature fusion created a more robust representation than either model alone. 
+
+---
+
+## Stage 5 — Hard Example Mining + Weighted XGBoost
+
+Misclassified and low-confidence samples were given higher training importance.
+
+### Performance
+
+| Metric              |  Score |
+| ------------------- | -----: |
+| Validation Accuracy | 89.84% |
+| Test Accuracy       | 90.29% |
+
+### Gain Over Previous Stage
+
++1.70% absolute test accuracy improvement. 
+
+---
+
+## Stage 6 — Final Flagship Production Model
+
+Further refinement of the hard-mined hybrid pipeline with optimized weighting and feature extraction.
+
+### Final Architecture
+
+```text id="6y0sm7"
+Input Image
+↓
+EfficientNet-B0 Feature Extractor
++
+Swin Transformer Feature Extractor
+↓
+2048-Dim Feature Fusion
+↓
+Weighted XGBoost
+↓
+Confidence + Explanation Output
+```
+
+### Final Performance
+
+| Metric              |  Score |
+| ------------------- | -----: |
+| Validation Accuracy | 96.14% |
+| Test Accuracy       | 96.20% |
+
+### Final Classification Quality
+
+* AI Precision: 95.95%
+* AI Recall: 96.35%
+* Real Precision: 96.43%
+* Real Recall: 96.04%
+
+
+
+---
+
+## Performance Progression Summary
+
+| Stage                  | Test Accuracy |
+| ---------------------- | ------------: |
+| Baseline EfficientNet  |        71.00% |
+| EfficientNet + XGBoost |        80.87% |
+| Swin + XGBoost         |        85.31% |
+| Fusion XGBoost         |        88.59% |
+| Hard-Mined Fusion      |        90.29% |
+| Final Flagship Model   |    **96.20%** |
+
+
+
+---
+
+## Engineering Takeaways
+
+* CNNs captured strong texture-level artifacts.
+* Transformers improved global consistency detection.
+* XGBoost outperformed simple dense neural heads on extracted embeddings.
+* Feature fusion substantially improved robustness.
+* Hard example mining was critical for edge-case performance.
+* Final system achieved production-grade accuracy on the curated test set.
+
+---
+
+## Reproducibility
+
+Training scripts for each stage are included in:
+
+```text id="fmg6gr"
+research/
+```
+
+Inference API is available in:
+
+```text id="0m3uq8"
+app.py
+model_api.py
+```
+---
 
 # Download Required Model Files
 
